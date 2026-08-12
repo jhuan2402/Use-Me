@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Use-Me | Moda feminina">
+  <title>Use-Me | Moda feminina</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="topbar">
+      <button class="icon-btn" aria-label="Abrir menu" id="menuBtn">
+        <span class="hamburger"><i></i><i></i><i></i></span>
+      </button>
+      <a class="brand" href="#">
+        <span class="brand-script">Use-Me</span>
+        <span class="brand-handle">@useme.oficiaal</span>
+      </a>
+      <button class="icon-btn bag-trigger" aria-label="Abrir sacola" id="bagBtn">
+        <span>♧</span><b class="bag-count" id="bagCount">0</b>
+      </button>
+    </div>
+
+    <div class="hero-copy">
+      <p class="eyebrow">MODA FEMININA</p>
+      <h1>Seu estilo,<br><em>do seu jeito.</em></h1>
+      <p>Peças escolhidas para você vestir confiança em todos os momentos.</p>
+      <a class="primary-btn" href="#produtos">Ver novidades</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <label class="search-box">
+        <span>⌕</span>
+        <input id="searchInput" type="search" placeholder="Buscar produtos..." autocomplete="off">
+      </label>
+    </section>
+
+    <section class="categories-wrap" id="categorias" aria-label="Categorias">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EXPLORE</p>
+          <h2>Categorias</h2>
+        </div>
+      </div>
+      <div class="categories" id="categories"></div>
+    </section>
+
+    <section class="products-section" id="produtos">
+      <div class="section-heading products-heading">
+        <div>
+          <p class="eyebrow">SELEÇÃO USE-ME</p>
+          <h2>Novidades</h2>
+        </div>
+        <span id="resultCount"></span>
+      </div>
+
+      <div class="products-grid" id="productsGrid"></div>
+      <p class="empty-state" id="emptyState">Nenhum produto encontrado.</p>
+    </section>
+
+    <section class="about" id="sobre">
+      <div>
+        <p class="eyebrow">USE-ME</p>
+        <h2>Elegância que combina com você.</h2>
+        <p>
+          Descubra peças versáteis, atuais e pensadas para valorizar o seu estilo.
+          Salve seus favoritos e fale com a gente pelo WhatsApp para comprar.
+        </p>
+        <a class="outline-btn" href="#produtos">Conhecer a coleção</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <span class="brand-script small">Use-Me</span>
+      <span>@useme.oficiaal</span>
+    </div>
+    <p>© <span id="year"></span> Use-Me. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Menu lateral -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="side-drawer menu-drawer" id="menuDrawer" aria-hidden="true">
+    <div class="drawer-header">
+      <span class="drawer-script">Use-Me</span>
+      <button class="drawer-close" data-close-drawer aria-label="Fechar menu">×</button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#produtos" data-menu-link>Novidades</a>
+      <a href="#categorias" data-menu-link>Categorias</a>
+      <a href="#sobre" data-menu-link>Sobre a Use-Me</a>
+      <a href="#produtos" data-menu-link>Ver produtos</a>
+    </nav>
+    <div class="drawer-footer">
+      <p>@useme.oficiaal</p>
+      <a id="menuWhatsapp" href="#" target="_blank" rel="noopener">Falar no WhatsApp ↗</a>
+    </div>
+  </aside>
+
+  <!-- Sacola lateral -->
+  <aside class="side-drawer bag-drawer" id="bagDrawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div>
+        <span class="eyebrow">SEU PEDIDO</span>
+        <h2>Sacola</h2>
+      </div>
+      <button class="drawer-close" data-close-drawer aria-label="Fechar sacola">×</button>
+    </div>
+    <div class="bag-items" id="bagItems"></div>
+    <div class="bag-empty" id="bagEmpty">
+      <div class="bag-empty-icon">♧</div>
+      <h3>Sua sacola está vazia</h3>
+      <p>Escolha suas peças favoritas e elas aparecerão aqui.</p>
+      <button class="primary-btn" id="continueShopping">Ver produtos</button>
+    </div>
+    <div class="bag-summary" id="bagSummary">
+      <div><span>Subtotal</span><strong id="bagTotal">R$ 0,00</strong></div>
+      <button class="checkout-btn" id="checkoutBtn">FINALIZAR PELO WHATSAPP</button>
+      <small>O pedido será enviado para a loja pelo WhatsApp para confirmação.</small>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <a class="whatsapp" id="whatsappBtn" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <span>◔</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
